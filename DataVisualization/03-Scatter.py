@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+dataset = pd.read_csv('SaratogaHouses.csv')
+print(dataset.head())
+
+X = dataset['livingArea']
+y = dataset['price']
+plt.title("Price W.R.T Living Area")
+plt.xlabel('Living Area')
+plt.ylabel('Price')
+plt.scatter(X,y)
+# plt.plot(X,y,'o')
+# here 'o' means scatter plot
+plt.show()
